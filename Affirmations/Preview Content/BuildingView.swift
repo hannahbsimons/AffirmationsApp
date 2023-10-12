@@ -41,7 +41,7 @@ struct BuildingView: View {
         .padding()
     }
     func makePOSTRequest() {
-        guard let url = URL(string: "https://hackathon-affirmations.blahblah.com/rephrase/") else {
+        guard let url = URL(string: "https://hackathon-affirmations.int.drift.com/rephrase/") else {
             return // Invalid URL
         }
 
