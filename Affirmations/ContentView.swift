@@ -25,20 +25,26 @@ struct ContentView: View {
                     Spacer().frame(height: 30)
                     
                     NavigationLink(destination: BuildingView()) {
-                        Text("AI-powered affirmation building")
+                        Text("AI-powered affirmation suggestions")
                             .foregroundColor(.orange)
                             .font(.custom("Futura", size: 18))
                     }
                     
                     NavigationLink(destination: SelectionView()) {
-                        Text("End-of-day affirmation selection")
-                            .foregroundColor(.orange)
+                        Text("AI-powered affirmation generation")
+                            .foregroundColor(.yellow)
+                            .font(.custom("Futura", size: 18))
+                    }
+                    
+                    NavigationLink(destination: SpeechView()) {
+                        Text("Read your affirmations aloud")
+                            .foregroundColor(.green)
                             .font(.custom("Futura", size: 18))
                     }
                     
                     NavigationLink(destination: ReminderView()) {
-                        Text("Read your affirmations aloud")
-                            .foregroundColor(.orange)
+                        Text("Manage notifications")
+                            .foregroundColor(.blue)
                             .font(.custom("Futura", size: 18))
                     }
                     

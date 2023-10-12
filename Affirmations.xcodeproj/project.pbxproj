@@ -17,6 +17,7 @@
 		1D07B19B2AD741F6004C3B40 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B19A2AD741F6004C3B40 /* ReminderView.swift */; };
 		1D07B1A52AD747E1004C3B40 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A42AD747E1004C3B40 /* BuildingView.swift */; };
 		1D07B1A72AD747ED004C3B40 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A62AD747ED004C3B40 /* SelectionView.swift */; };
+		1D07B1A92AD84EB9004C3B40 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		1D07B19A2AD741F6004C3B40 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		1D07B1A42AD747E1004C3B40 /* BuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
 		1D07B1A62AD747ED004C3B40 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				1D07B19A2AD741F6004C3B40 /* ReminderView.swift */,
 				1D07B1A42AD747E1004C3B40 /* BuildingView.swift */,
 				1D07B1A62AD747ED004C3B40 /* SelectionView.swift */,
+				1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */,
 				1D07B1772AD72788004C3B40 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -270,6 +273,7 @@
 				1D07B1A52AD747E1004C3B40 /* BuildingView.swift in Sources */,
 				1D07B1712AD72787004C3B40 /* AffirmationsApp.swift in Sources */,
 				1D07B19B2AD741F6004C3B40 /* ReminderView.swift in Sources */,
+				1D07B1A92AD84EB9004C3B40 /* SpeechView.swift in Sources */,
 				1D07B1A72AD747ED004C3B40 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
