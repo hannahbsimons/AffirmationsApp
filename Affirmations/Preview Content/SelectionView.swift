@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SelectionView: View {
     
-    @State private var selectedAffirmation = "Placeholder 1"
+    @State private var selectedAffirmation = ""
     @State private var customAffirmation = ""
     @State private var showCustomAffirmation = false
     @State private var showAffirmations = false
         
-    let affirmations = ["Select", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5", "Placeholder 6", "Placeholder 7", "Placeholder 8", "Placeholder 9", "Placeholder 10"]
+    let affirmations = ["career", "communication", "contribution", "emotional health", "environment", "family", "friendships", "fun and recreation", "mental health", "money and finances", "nutrition", "other", "personal growth", "physical health", "relationships", "self-love", "sleeping", "social", "spirituality"]
         
     
     var body: some View {
@@ -35,19 +35,19 @@ struct SelectionView: View {
                     ForEach(affirmations, id: \.self) { affirmation in
                         Text(affirmation)
                     }
-                    Text("Other").tag("Other")
+                    Text("other").tag("other")
                 }
                 .pickerStyle(MenuPickerStyle())
                 .padding()
                 
-                if selectedAffirmation == "Other" {
+                if selectedAffirmation == "other" {
                     TextField("Enter your own affirmation", text: $customAffirmation)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                 }
                 
                 Button(action: {
-                    if selectedAffirmation == "Other" {
+                    if selectedAffirmation == "other" {
                         let savedAffirmation = customAffirmation
                     } else {
                         let savedAffirmation = selectedAffirmation
@@ -55,10 +55,11 @@ struct SelectionView: View {
                     showAffirmations = true
                 }) {
                     Text("Done")
-                        .foregroundColor(.white)
+                        .foregroundColor(.orange)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.white)
                         .cornerRadius(8)
+                        .font(.custom("Futura", size: 18))
                 }
                 
                 if showAffirmations {
