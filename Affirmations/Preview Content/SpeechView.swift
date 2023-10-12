@@ -70,7 +70,9 @@ struct SpeechView: View {
     func readAffirmations() {
         for affirmation in affirmations {
             let speechUtterance = AVSpeechUtterance(string: affirmation)
-            speechSynthesizer.speak(speechUtterance)
+            speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            speechUtterance.rate = 0.52
+            self.speechSynthesizer.speak(speechUtterance)
         }
     }
 }

@@ -21,7 +21,7 @@ struct BuildingView: View {
             VStack(spacing: 16) {
                 
                 Text("Use our AI generated suggestions to phrase your affirmations to reflect your aspirations more accurately!")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.hotPink)
                     .font(.custom("Futura", size: 18))
                 
                 TextField("Enter an affirmation to rephrase", text: $affirmationText)
