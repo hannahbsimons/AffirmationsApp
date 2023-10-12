@@ -1,3 +1,10 @@
+//
+//  SpeechView.swift
+//  Affirmations
+//
+//  Created by Hannah Simons on 10/12/23.
+//
+
 import SwiftUI
 import AVFoundation
 
