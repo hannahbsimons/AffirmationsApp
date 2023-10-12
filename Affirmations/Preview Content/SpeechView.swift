@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct SpeechView: View {
-    @State var affirmations: [String] = ["hello"]
+    @State private var affirmations: [String] = [] // Initialize as an empty array
     let speechSynthesizer = AVSpeechSynthesizer()
     
     var body: some View {
@@ -20,7 +20,7 @@ struct SpeechView: View {
                 
                 Text("Read your affirmations aloud!")
                     .foregroundColor(.orange)
-                    .font(.custom("Futura", size: 24))
+                    .font(.custom("Futura", size: 18))
                 
                 if !affirmations.isEmpty {
                     Button(action: {
