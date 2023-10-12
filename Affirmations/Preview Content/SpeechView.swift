@@ -47,15 +47,6 @@ struct SpeechView: View {
             self.speechSynthesizer.speak(speechUtterance)
         }
     }
-    
-    func readStuff() {
-        //let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance = AVSpeechUtterance(string: "Hello")
-        speechUtterance.rate = 0.5
-        speechUtterance.pitchMultiplier = 1.0
-        speechUtterance.volume = 1.0
-        speechSynthesizer.speak(speechUtterance)
-    }
 }
 
 #Preview {
