@@ -12,6 +12,7 @@ struct SelectionView: View {
     @State private var selectedAffirmation = "Placeholder 1"
     @State private var customAffirmation = ""
     @State private var showCustomAffirmation = false
+    @State private var showAffirmations = false
         
     let affirmations = ["Select", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5", "Placeholder 6", "Placeholder 7", "Placeholder 8", "Placeholder 9", "Placeholder 10"]
         
@@ -30,9 +31,6 @@ struct SelectionView: View {
                     .foregroundColor(.orange)
                     .font(.custom("Futura", size: 18))
                 
-                // drop down
-                // include an "other" for them to type in
-                
                 Picker(selection: $selectedAffirmation, label: Text("")) {
                     ForEach(affirmations, id: \.self) { affirmation in
                         Text(affirmation)
@@ -48,12 +46,27 @@ struct SelectionView: View {
                         .padding()
                 }
                 
-                if selectedAffirmation != "Select" {
-                    Text("Your new affirmations are:")
-                        .foregroundColor(.orange)
-                        .font(.custom("Futura", size: 18))
+                Button(action: {
+                    if selectedAffirmation == "Other" {
+                        let savedAffirmation = customAffirmation
+                    } else {
+                        let savedAffirmation = selectedAffirmation
+                    }
+                    showAffirmations = true
+                }) {
+                    Text("Done")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
                 }
                 
+                if showAffirmations {
+                    Text("Here's your list of AI-generated affirmations:")
+                        .foregroundColor(.orange)
+                        .font(.custom("Futura", size: 18))
+                        .padding()
+                }
             }
         }
         .padding()
