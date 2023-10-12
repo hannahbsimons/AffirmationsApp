@@ -37,7 +37,7 @@ struct ContentView: View {
                     }
                     
                     NavigationLink(destination: ReminderView()) {
-                        Text("Reminders to enunciate your affirmations")
+                        Text("Read your affirmations aloud")
                             .foregroundColor(.orange)
                             .font(.custom("Futura", size: 18))
                     }
