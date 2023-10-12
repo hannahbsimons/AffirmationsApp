@@ -24,13 +24,13 @@ struct ContentView: View {
                     
                     Spacer().frame(height: 30)
                     
-                    NavigationLink(destination: BuildingView()) {
+                    NavigationLink(destination: RephraseView()) {
                         Text("AI-powered affirmation suggestions")
                             .foregroundColor(.orange)
                             .font(.custom("Futura", size: 18))
                     }
                     
-                    NavigationLink(destination: SelectionView()) {
+                    NavigationLink(destination: GenerationView()) {
                         Text("AI-powered affirmation generation")
                             .foregroundColor(.yellow)
                             .font(.custom("Futura", size: 18))

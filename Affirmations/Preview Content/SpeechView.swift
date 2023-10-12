@@ -22,17 +22,15 @@ struct SpeechView: View {
                     .foregroundColor(.orange)
                     .font(.custom("Futura", size: 18))
 
-                if !affirmations.isEmpty {
-                    Button(action: {
-                        readAffirmations()
-                    }) {
-                        Text("Read")
-                            .foregroundColor(.hotPink)
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .font(.custom("Futura", size: 18))
-                    }
+                Button(action: {
+                    readAffirmations()
+                }) {
+                    Text("Read")
+                        .foregroundColor(.hotPink)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .font(.custom("Futura", size: 18))
                 }
             }
         }
