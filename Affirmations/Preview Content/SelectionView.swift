@@ -21,15 +21,17 @@ struct SelectionView: View {
         ZStack() {
             Color(.yellow2).edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 16) {
+            VStack(alignment: .center, spacing: 8) {
                 
                 Text("Use our AI to generate a list of affirmations to work on!")
                     .foregroundColor(.orange)
-                    .font(.custom("Futura", size: 18))
+                    .font(.custom("Futura", size: 24))
+                    .multilineTextAlignment(.center)
                 
                 Text("Select the area you'd like to focus on:")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.green)
                     .font(.custom("Futura", size: 18))
+                    .multilineTextAlignment(.center)
                 
                 Picker(selection: $selectedAffirmation, label: Text("")) {
                     ForEach(affirmations, id: \.self) { affirmation in
@@ -55,7 +57,7 @@ struct SelectionView: View {
                     showAffirmations = true
                 }) {
                     Text("Done")
-                        .foregroundColor(.orange)
+                        .foregroundColor(.purple)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
@@ -64,9 +66,10 @@ struct SelectionView: View {
                 
                 if showAffirmations {
                     Text("Here's your list of AI-generated affirmations:")
-                        .foregroundColor(.orange)
+                        .foregroundColor(.hotPink)
                         .font(.custom("Futura", size: 18))
                         .padding()
+                        .multilineTextAlignment(.center)
                 }
             }
         }

@@ -27,10 +27,11 @@ struct SpeechView: View {
                         readAffirmations()
                     }) {
                         Text("Read")
-                            .foregroundColor(.white)
+                            .foregroundColor(.hotPink)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.white)
                             .cornerRadius(10)
+                            .font(.custom("Futura", size: 18))
                     }
                 }
             }

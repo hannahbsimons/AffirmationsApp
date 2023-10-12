@@ -28,20 +28,22 @@ struct ReminderView: View {
                         scheduleDailyReminder()
                     }) {
                         Text("Yes")
-                            .foregroundColor(.white)
+                            .foregroundColor(.green)
                             .padding()
-                            .background(Color.green)
+                            .background(Color.white)
                             .cornerRadius(10)
+                            .font(.custom("Futura", size: 18))
                     }
                     
                     Button(action: {
                         isReminderEnabled = false
                     }) {
                         Text("No")
-                            .foregroundColor(.white)
+                            .foregroundColor(.red)
                             .padding()
-                            .background(Color.red)
+                            .background(Color.white)
                             .cornerRadius(10)
+                            .font(.custom("Futura", size: 18))
                     }
                 }
             }
