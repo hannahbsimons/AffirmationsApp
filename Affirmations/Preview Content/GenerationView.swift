@@ -44,7 +44,7 @@ struct GenerationView: View {
                 .padding()
                 
                 if selectedTheme == "other" {
-                    TextField("Enter your own affirmation", text: $customTheme)
+                    TextField("Enter your own focus area", text: $customTheme)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                 }
@@ -56,7 +56,7 @@ struct GenerationView: View {
                         fetchAffirmations(theme: selectedTheme)
                     }
                 }) {
-                    Text("Done")
+                    Text("Generate!")
                         .foregroundColor(.purple)
                         .padding()
                         .background(Color.white)

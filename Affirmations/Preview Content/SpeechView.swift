@@ -26,7 +26,18 @@ struct SpeechView: View {
                     readAffirmations()
                 }) {
                     Text("Read")
-                        .foregroundColor(.hotPink)
+                        .foregroundColor(.green)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .font(.custom("Futura", size: 18))
+                }
+                
+                Button(action: {
+                    stopSpeaking()
+                }) {
+                    Text("Stop")
+                        .foregroundColor(.red) // Change to your desired stop button color
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
@@ -64,15 +75,22 @@ struct SpeechView: View {
         }
         task.resume()
     }
-
+    
     func readAffirmations() {
+        let speechUtterance2 = AVSpeechUtterance(string: "repeat after me")
+        self.speechSynthesizer.speak(speechUtterance2)
         for affirmation in affirmations {
             let speechUtterance = AVSpeechUtterance(string: affirmation)
+            speechUtterance.postUtteranceDelay = 3.0
             speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             speechUtterance.rate = 0.52
             self.speechSynthesizer.speak(speechUtterance)
         }
     }
+    
+    func stopSpeaking() {
+       speechSynthesizer.stopSpeaking(at: .immediate)
+   }
 }
 
 #Preview {
