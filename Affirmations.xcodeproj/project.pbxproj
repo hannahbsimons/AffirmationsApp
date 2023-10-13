@@ -18,6 +18,7 @@
 		1D07B1A52AD747E1004C3B40 /* RephraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A42AD747E1004C3B40 /* RephraseView.swift */; };
 		1D07B1A72AD747ED004C3B40 /* GenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A62AD747ED004C3B40 /* GenerationView.swift */; };
 		1D07B1A92AD84EB9004C3B40 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */; };
+		1D8B36EF2AD9915D00A1C3B9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B36EE2AD9915D00A1C3B9 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1D07B1A42AD747E1004C3B40 /* RephraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RephraseView.swift; sourceTree = "<group>"; };
 		1D07B1A62AD747ED004C3B40 /* GenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationView.swift; sourceTree = "<group>"; };
 		1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
+		1D8B36EE2AD9915D00A1C3B9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				1D07B1A62AD747ED004C3B40 /* GenerationView.swift */,
 				1D07B1A82AD84EB9004C3B40 /* SpeechView.swift */,
 				1D07B1772AD72788004C3B40 /* Preview Assets.xcassets */,
+				1D8B36EE2AD9915D00A1C3B9 /* AboutView.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D07B1732AD72787004C3B40 /* ContentView.swift in Sources */,
+				1D8B36EF2AD9915D00A1C3B9 /* AboutView.swift in Sources */,
 				1D07B1A52AD747E1004C3B40 /* RephraseView.swift in Sources */,
 				1D07B1712AD72787004C3B40 /* AffirmationsApp.swift in Sources */,
 				1D07B19B2AD741F6004C3B40 /* ReminderView.swift in Sources */,

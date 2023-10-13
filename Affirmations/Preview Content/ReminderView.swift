@@ -18,8 +18,8 @@ struct ReminderView: View {
             VStack(spacing: 16) {
                 
                 Text("Would you like daily reminders to enunciate your affirmations?")
-                    .foregroundColor(.orange)
-                    .font(.custom("Futura", size: 18))
+                    .foregroundColor(.hotPink)
+                    .font(.custom("Futura", size: 24))
                 
                 HStack(spacing: 20) {
                     Button(action: {
@@ -32,7 +32,7 @@ struct ReminderView: View {
                             .padding()
                             .background(Color.white)
                             .cornerRadius(10)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Futura", size: 24))
                     }
                     
                     Button(action: {
@@ -43,7 +43,7 @@ struct ReminderView: View {
                             .padding()
                             .background(Color.white)
                             .cornerRadius(10)
-                            .font(.custom("Futura", size: 18))
+                            .font(.custom("Futura", size: 24))
                     }
                 }
             }

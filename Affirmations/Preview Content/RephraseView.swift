@@ -14,6 +14,10 @@ struct RephraseView: View {
     @State var showResponse = false
     @State var rephrasedText = "" // To store the rephrased affirmation
     @State private var generatedAffirmation: String = ""
+    @State private var selectedTheme = ""
+    @State private var customTheme = ""
+        
+    let affirmationsList = ["career", "communication", "contribution", "emotional health", "environment", "family", "friendships", "fun and recreation", "mental health", "money and finances", "nutrition", "other", "personal growth", "physical health", "relationships", "self-love", "sleeping", "social", "spirituality"]
     
     var body: some View {
         
@@ -25,7 +29,7 @@ struct RephraseView: View {
                 Text("Transform everything into a positive affirmation!\nIt can be a goal, an aspiration,
                 a desire, even phrases from your negative self-talk")
                     .foregroundColor(.hotPink)
-                    .font(.custom("Futura", size: 18))
+                    .font(.custom("Futura", size: 24))
                 
                 TextField("Enter a statement and let our GenAI rephrase it into a positive affirmation:", text: $affirmation_by_user)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -37,11 +41,37 @@ struct RephraseView: View {
                     .onSubmit {
                         fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: theme)
                     }
+                    Text("other").tag("other")
+                }
+                .pickerStyle(MenuPickerStyle())
+                .padding()
+                
+                if selectedTheme == "other" {
+                    TextField("Enter your own focus area", text: $customTheme)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                }
+                
+                Button(action: {
+                    if selectedTheme == "other" {
+                        fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: customTheme)
+                    } else {
+                        fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: selectedTheme)
+                    }
+                }) {
+                    Text("Rephrase!")
+                        .foregroundColor(.purple)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .font(.custom("Futura", size: 24))
+                }
+                
                 
                 if showResponse {
                     Text("Your rephrased affirmation is: \(generatedAffirmation)")
-                        .font(.custom("Futura", size: 18))
-                        .foregroundColor(.orange)
+                        .font(.custom("Futura", size: 24))
+                        .foregroundColor(.hotPink)
                 }
             }
         }
