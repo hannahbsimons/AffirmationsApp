@@ -35,10 +35,10 @@ struct RephraseView: View {
                     .padding(.horizontal)
                 
                 TextField("What area does this affirmation belong to?", text: $theme)
-                   .textFieldStyle(RoundedBorderTextFieldStyle())
-                   .padding(.horizontal)
-                   .onSubmit {
-                       fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: theme)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                    .onSubmit {
+                        fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: theme)
                     }
                     Text("other").tag("other")
                 }
