@@ -28,15 +28,15 @@ struct RephraseView: View {
                 
                 Text("Use our AI generated suggestions to phrase your affirmations to reflect your aspirations more accurately!")
                     .foregroundColor(.hotPink)
-                    .font(.custom("Futura", size: 18))
+                    .font(.custom("Futura", size: 24))
                 
                 TextField("Enter an affirmation to rephrase", text: $affirmation_by_user)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 
                 Text("Select the area you'd like to focus on:")
-                    .foregroundColor(.green)
-                    .font(.custom("Futura", size: 18))
+                    .foregroundColor(.hotPink)
+                    .font(.custom("Futura", size: 24))
                     .multilineTextAlignment(.center)
                 
                 Picker(selection: $selectedTheme, label: Text("")) {
@@ -49,7 +49,7 @@ struct RephraseView: View {
                 .padding()
                 
                 if selectedTheme == "other" {
-                    TextField("Enter your own affirmation", text: $customTheme)
+                    TextField("Enter your own focus area", text: $customTheme)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                 }
@@ -66,14 +66,14 @@ struct RephraseView: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Futura", size: 24))
                 }
                 
                 
                 if showResponse {
                     Text("Your rephrased affirmation is: \(generatedAffirmation)")
-                        .font(.custom("Futura", size: 18))
-                        .foregroundColor(.orange)
+                        .font(.custom("Futura", size: 24))
+                        .foregroundColor(.hotPink)
                 }
             }
         }

@@ -19,8 +19,8 @@ struct SpeechView: View {
             VStack(spacing: 16) {
 
                 Text("Read your affirmations aloud!")
-                    .foregroundColor(.orange)
-                    .font(.custom("Futura", size: 18))
+                    .foregroundColor(.hotPink)
+                    .font(.custom("Futura", size: 24))
 
                 Button(action: {
                     readAffirmations()
@@ -30,7 +30,7 @@ struct SpeechView: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Futura", size: 24))
                 }
                 
                 Button(action: {
@@ -41,7 +41,7 @@ struct SpeechView: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Futura", size: 24))
                 }
             }
         }

@@ -25,13 +25,13 @@ struct GenerationView: View {
             VStack(alignment: .center, spacing: 8) {
                 
                 Text("Use our AI to generate a list of affirmations to work on!")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.hotPink)
                     .font(.custom("Futura", size: 24))
                     .multilineTextAlignment(.center)
                 
                 Text("Select the area you'd like to focus on:")
-                    .foregroundColor(.green)
-                    .font(.custom("Futura", size: 18))
+                    .foregroundColor(.hotPink)
+                    .font(.custom("Futura", size: 24))
                     .multilineTextAlignment(.center)
                 
                 Picker(selection: $selectedTheme, label: Text("")) {
@@ -61,13 +61,13 @@ struct GenerationView: View {
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)
-                        .font(.custom("Futura", size: 18))
+                        .font(.custom("Futura", size: 24))
                 }
                 
                 if showThemes {
                    Text("Here's your list of AI-generated affirmations:")
                        .foregroundColor(.hotPink)
-                       .font(.custom("Futura", size: 18))
+                       .font(.custom("Futura", size: 24))
                        .padding()
                        .multilineTextAlignment(.center)
                    

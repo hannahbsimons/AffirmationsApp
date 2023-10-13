@@ -48,6 +48,12 @@ struct ContentView: View {
                             .font(.custom("Futura", size: 18))
                     }
                     
+                    NavigationLink(destination: AboutView()) {
+                        Text("About us")
+                            .foregroundColor(.purple)
+                            .font(.custom("Futura", size: 18))
+                    }
+                    
                 }
             }
             
