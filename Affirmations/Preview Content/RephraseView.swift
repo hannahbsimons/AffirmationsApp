@@ -34,14 +34,11 @@ struct RephraseView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 
-                Text("What area does this affirmation belong to?")
-                    .foregroundColor(.hotPink)
-                    .font(.custom("Futura", size: 24))
-                    .multilineTextAlignment(.center)
-                
-                Picker(selection: $selectedTheme, label: Text("")) {
-                    ForEach(affirmationsList, id: \.self) { affirmation in
-                        Text(affirmation)
+                TextField("What area does this affirmation belong to?", text: $theme)
+                                   .textFieldStyle(RoundedBorderTextFieldStyle())
+                                   .padding(.horizontal)
+                                   .onSubmit {
+                                       fetchAffirmations(affirmation_by_user: affirmation_by_user, theme: theme)
                     }
                     Text("other").tag("other")
                 }
