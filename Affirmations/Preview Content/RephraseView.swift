@@ -34,7 +34,7 @@ struct RephraseView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 
-                Text("Select the area you'd like to focus on:")
+                Text("What area does this affirmation belong to?")
                     .foregroundColor(.hotPink)
                     .font(.custom("Futura", size: 24))
                     .multilineTextAlignment(.center)
