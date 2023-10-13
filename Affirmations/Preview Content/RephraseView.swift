@@ -22,15 +22,16 @@ struct RephraseView: View {
             
             VStack(spacing: 16) {
                 
-                Text("Use our AI generated suggestions to phrase your affirmations to reflect your aspirations more accurately!")
+                Text("Transform everything into a positive affirmation!\nIt can be a goal, an aspiration,
+                a desire, even phrases from your negative self-talk")
                     .foregroundColor(.hotPink)
                     .font(.custom("Futura", size: 18))
                 
-                TextField("Enter an affirmation to rephrase", text: $affirmation_by_user)
+                TextField("Enter a statement and let our GenAI rephrase it into a positive affirmation:", text: $affirmation_by_user)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                 
-                TextField("Enter a theme", text: $theme)
+                TextField("What area does this affirmation belong to?", text: $theme)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
                     .onSubmit {
