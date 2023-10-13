@@ -17,10 +17,8 @@ struct SpeechView: View {
             Color(.yellow2).edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 16) {
-                Text("Affirmations help reframe negative self-talk, build self-confidence,
-                and cultivate a positive mindset. By repeating these affirmations regularly,
-                you can rewire your subconscious mind and attract positive experiences into your life.")
-                    .foregroundColor(.pink)
+                Text("Affirmations help reframe negative self-talk, build self-confidence, and cultivate a positive mindset. By repeating these affirmations regularly, you can rewire your subconscious mind and attract positive experiences into your life.")
+                    .foregroundColor(.hotPink)
                     .font(.custom("Futura", size: 18))
                 Text("Read your affirmations aloud!")
                     .foregroundColor(.hotPink)
